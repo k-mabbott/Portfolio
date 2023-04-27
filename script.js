@@ -14,8 +14,7 @@ function goRun(){
         },
         false
         );
-        setTimeout(keepRunning, 4000)
-        setTimeout(keepRunning, 4000);
+        setTimeout(keepRunning, 9000);
 }
 function keepRunning(){
     f.style.animation = ''
