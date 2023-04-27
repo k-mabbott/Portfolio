@@ -1,7 +1,4 @@
-// 1 have js display world 
-// 2 have pacman move
-// 3 eat coin // add score
-// dont go through walls
+//Pacman!
 
 let world = [
     [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
@@ -33,9 +30,9 @@ function displayWorld (){
     for (var i = 0; i<world.length; i++){
         output += '\n<div class ="row">\n'
         for (var j = 0; j<world[i].length; j++){
-            if(world[i][j] == 4){
-                output += "<div class='ghost'></div>";
-                }
+            // if(world[i][j] == 4){
+            //     output += "<div class='ghost'></div>";
+            //     }
             if(world[i][j] == 3){
                 output += "<div class='cherry'></div>";
                 }
@@ -69,25 +66,41 @@ function displayScore(){
     document.getElementById('score').innerHTML = score
 }
 
-function displayGameOver(){
-    document.getElementById('game').innerHTML = `<button onclick="startGame()">restart</button><h3> Your Score Was ${score} </h3>`
-}
+let ghostInterval = '';
 
 function startGame(){
     document.getElementById('game').innerHTML =`<div id="world"></div>
-                                                <div id="pacman"></div>
-                                                <div id="ghost"></div>
-                                                <div id="score">0</div>`
+    <div id="pacman"></div>
+    <div id="ghost"></div>
+    <div id="score">0</div>`
+    world = [
+        [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+        [2,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2],
+        [2,1,2,2,2,2,2,1,1,2,2,1,2,2,1,1,1,1,2,2,1,2,2,1,1,2],
+        [2,1,1,2,1,2,1,1,1,1,1,1,1,2,1,1,1,1,1,2,1,2,1,1,1,2],
+        [2,1,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,2,2],
+        [2,1,1,1,1,1,1,1,1,1,1,3,1,1,1,1,1,1,1,1,1,1,1,1,1,2],
+        [2,1,2,1,1,1,2,1,1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,2],
+        [2,1,2,1,1,1,2,1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,2,1,1,2],
+        [2,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,2],
+        [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]
+    ]
     displayWorld()
+    score = 0;
     pacman.x = 1;
     pacman.y = 1;
     displayPacman()
     ghost.x = 24;
     ghost.y = 8;
     displayGhost()
+    ghostInterval = setInterval(moveGhost, 300)
 }
 
-setInterval(moveGhost, 350)
+
+function displayGameOver(){
+    document.getElementById('game').innerHTML = `<button onclick="startGame()">restart</button><h3> Your Score Was ${score} </h3>`
+    clearInterval(ghostInterval)
+}
 
 function moveGhost(){
     if (ghost.y < pacman.y && world[ghost.y+1][ghost.x] != 2){
