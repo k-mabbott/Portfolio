@@ -127,6 +127,9 @@ aside h3{
     border-radius: 1rem;
     z-index: 10;
 }
+#pacman {
+    border-radius: 0;
+}
 /* --------------------------------------- projects------------ */
 
 .filler-tools {
@@ -263,14 +266,7 @@ footer ul li a {
 .preview {
     transition: 500ms;
     opacity: 0;
-}
-img[alt="Calculator"]{
-    height: 0rem;
-    width: 4rem;
-}
-img[alt="jane-doe"], img[alt="weather"]{
-    height: 0rem;
-    width: 8rem;
+    height: 0;
 }
 /* ----------------------------------------------Footer imgs------- */
 footer img {
