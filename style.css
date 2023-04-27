@@ -38,7 +38,7 @@ img[alt="stick-figure"]{
     border-radius: 2rem;
     position: relative;
     transition: transform 0.6s;
-    animation: run 5s infinite;
+    animation: run 6s infinite;
 }
 img[alt="stick-figure"]:hover {
     transition: 0s;
