@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Plus+Jakarta+Sans&family=Roboto&display=swap');
+
+* {
+	vertical-align: baseline;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+    font-family: 'Nunito', sans-serif;
+    list-style: none;
+	}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+
+
+    /* --------------- Generic ----------------- */
+.flex{
+    display: flex;
+}
+.align{
+    align-items: center;
+}
+.col {
+    flex-direction: column;
+}
+.border {
+    border: 2px solid black;
+}
+.bd-r{
+    border-radius: 1rem;
+}
+.pad {
+    padding: 2rem 1rem;
+}
+.pad-s{
+    padding: 0.5rem;
+}
+.pad-tb{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.italic {
+    font-style: italic;
+}
+.bold{
+    font-weight: bold;
+}
+.gap {
+    gap: 1.5rem;
+}
+.gap-s{
+    gap: 0.4rem;
+}
+.gap-m{
+    gap: 0.75rem;
+}
+.center {
+    text-align: center;
+}
+.space-between{
+    justify-content: space-between;
+}
+.space-evenly {
+    justify-content: space-evenly;
+}
+.justify-center{
+    justify-content: center;
+}
+.pad-btm {
+    padding-bottom: 1rem;
+}
+.block{
+    display: block;
+}
+.relative {
+    position: relative;
+}
+.fixed {
+    position: fixed;
+}
+h1{
+    font-size: 2rem;
+    font-weight: 800;
+}
+h2 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+h3{
+    font-size: 1.54rem;
+}
+h4 {
+    font-size: 1.4rem;
+}
+button {
+    background-color: #224e9e;
+    border-radius: 0.4rem;
+    box-shadow: 3px 3px 2px black;
+    padding: 0.2rem;
+    white-space: nowrap;
+    color: white
+}
+button:hover {
+    box-shadow: 5px 5px 3px black;
+}
+input {
+    border: 1px solid rgb(37, 37, 37);
+    background-color: rgba(255, 255, 255, 0.397);
+    border-radius: 0.5rem;
+}
+select {
+    border: 1px solid rgb(37, 37, 37);
+    background-color:  rgba(255, 255, 255, 0.397);
+    border-radius: 0.5rem;
+}

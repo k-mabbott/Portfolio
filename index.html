@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="generic.css">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <!-- ----------------------------------------------Nav--------------- -->
+    <header id="home" class="flex align gap" onclick="goRun()">
+        <div>
+            <h2>Kyle</h2>
+            <h3>Mabbott</h3>
+        </div>
+        <div id="run-zone">
+            <img src="./images/stick-figure.gif" id="runner" alt="stick-figure">
+        </div>
+    </header>
+    <nav class="flex space-evenly align">
+        <ul class="flex gap ">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#footer">Contact Me</a></li>
+        </ul>
+    </nav>
+    <main class="flex gap">
+        <aside class="flex col gap">
+            <!-- ---------------------------------------------------Aside -- & -- GetBacon ---------------------- -->
+            <div class="flex col gap bkg-clr bd-r pad-s pad-tb">
+                <h3>Website Filler Tools</h3>
+                <details class="filler-tools" id="collapse-bacon">
+                    <summary>
+                        Bacon Ipsum Generator
+                    </summary>
+                    <div id="bacon-card" class="flex col gap panel">
+                            <div class="flex col align">
+                                <label for="amount-input">How many <span id="format-span"></span></label>
+                                <input type="number" oninput="getAmount(this)" id="amount-input">
+                            </div>
+                            <div class="flex col align gap">
+                                <label for="filler-selector">
+                                Only meats or meats with random 'lorem ispum' filler
+                            </label>
+                            <select name="filler-selector" id="filler-selector" onchange="getMeatAndFiller(this)">
+                                <option value="all-meat">All Meat</option>
+                                <option value="meat-and-filler">Meat and Filler</option>
+                            </select>
+                        </div> 
+                        <div class="flex col align">
+                            <label for="format-type">Do you want sentences or paragraphs</label>
+                            <select name="format-type" id="format-type" onchange="getFormat(this)">
+                                <option value="sentences">Sentences</option>
+                                <option value="paras">Paragraphs</option>
+                            </select>
+                        </div>
+                        <div>
+                            <p>Start with 'Bacon ipsum dolor sit amet' ?</p>
+                            <label for="yes-lorem">Yes</label>
+                            <input type="radio" name="lorem" id="yes-lorem" value="yes" onclick="getLorem(this)">
+                            <label for="no-lorem">No</label>
+                            <input type="radio" name="lorem" id="no-lorem" value="no" onclick="getLorem(this)">
+                        </div>
+                        <div class="flex space-between">
+                            <button type="button" id="bacon-getter" onclick="getBacon()">Get that bacon!</button>
+                            <button type="button" onclick="copyText(this)" id="copy-btn">copy</button>
+                        </div>
+                        <div id="bacon">Bacon will appear here...</div>
+                    </div>
+                </details>
+                    <!-- ----------------------------------------------Get Pics ------------------------------- -->
+                <details class="filler-tools">
+                    <summary>Image Generator</summary>
+                    <div id="image-card" class="flex col gap panel">
+                        <div class="flex col">
+                            <label for="picture-type">What picture would you like?</label>
+                            <select name="picture type" id="picture-type">
+                                <option value="keanu">Keanu</option>
+                                <option value="dog">Dog</option>
+                                <option value="cat">Cat</option>
+                                <option value="random">Random</option>
+                            </select>
+                        </div>
+                        <div class="flex col">
+                            <label>Input image size (X)</label>
+                            <input type="number" id="img-x" placeholder="X in pixels(eg.200)">
+                        </div>
+                        <div class="flex col">
+                            <label>Input image size (Y)</label>
+                            <input type="number" id="img-y" placeholder="Y in pixels(eg.200)">
+                        </div>
+                        <button type="button" id="image-search" onclick="getImage()">Get Image!</button>
+                        <div id="image-div" class="flex col border gap align center pop-up-card">
+                            <div class="flex space-between">
+                                <span>Here is your image</span>
+                                <button type="button" id="random-img-close" onclick="hide(this)" class="pop-up-card-btn">X</button>
+                            </div>
+                            <div class="img-div">
+                                <img src="#" alt="Your picture" id="random-image">
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <!-- -----------------------------------------------------Projects------------ -->
+            <div id="projects" class="flex col gap-m bkg-clr bd-r pad-s pad-tb align">
+                <h3>Projects</h3>
+                <button type="button" class="projects flex" onmouseover="hoverProject(this)" onmouseout="hoverProjectOut(this)" onclick="showProject(this)">Basic Calculator</button> 
+                <img src="./images/calc.png" alt="Calculator" class="preview">
+                <div id="calculator" class="flex col pop-up-card">
+                    <div class="flex space-between align">
+                        <span>Basic Calculator</span>
+                        <button type="button" onclick="hide(this)" class="pop-up-card-btn">X</button>
+                    </div>
+                    <object type="text/html" data="./Calculator/index.html"></object>
+                </div>
+                <button type="button" class="projects flex" onmouseover="hoverProject(this)" onmouseout="hoverProjectOut(this)" onclick="showProject(this)">Weather Page</button> 
+                <img src="./images/weather.png" alt="weather" class="preview">
+                <div id="weather" class="flex col pop-up-card">
+                    <div class="flex space-between align">
+                        <span>Weather page</span>
+                        <button type="button" onclick="hide(this)" class="pop-up-card-btn">X</button>
+                    </div>
+                    <object type="text/html" data="./Dojo_weather/index.html"></object>
+                </div>
+                <button type="button" class="projects flex" onmouseover="hoverProject(this)" onmouseout="hoverProjectOut(this)" onclick="showProject(this)">Jane Doe Profile</button> 
+                <img src="./images/jane-doe.png" alt="jane-doe" class="preview">
+                <div id="jane-doe" class="flex col pop-up-card">
+                    <div class="flex space-between align">
+                        <span>Jane Doe Profile</span>
+                        <button type="button" onclick="hide(this)" class="pop-up-card-btn">X</button>
+                    </div>
+                    <object type="text/html" data="./Jane_Doe_Profile/index.html"></object>
+                </div>
+            </div>
+            <div id="wood-work" class="flex col bkg-clr bd-r pad-s pad-tb align gap">
+                <h3>Wood Projects</h3>
+                <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
+                <div class="pa-gallery-player-widget"
+                    data-link="https://photos.app.goo.gl/vuUPCHiuH2qbmkkx8"
+                    data-title="Wood working"
+                    data-description="17 new items added to shared album">
+                    <object data="https://lh3.googleusercontent.com/HWb0_XAWvvNvgab6yDHRClnMhooZSB8u3ijVxYNrwDWXkDseNMwzXwQCF5GWx2h9BbuLbSHu7Tk70T_S4oGYRr1ZP0JM0mXYaTOB9XDJmjbwdoU1PBOpkgryYoME9R4rg3jWG1nBFw=w1920-h1080"></object>
+                    <object data="https://lh3.googleusercontent.com/tDtZuvchOHFu5JM2MS7APMHcyRb42Sp6PgQzxm4ArZXYaU4tPl7rNwAxxsvEb8ewsPvcpWe6QuA33HZSwLq1Muc98grTvu-mJrLns3lNM71txr8HPfkYDpiDUv8XcgjPaKnoIKh4Ag=w1920-h1080"></object>
+                    <object data="https://lh3.googleusercontent.com/XbW5buJvfVXQBuBIGbaw4bDrbvFRrB0NHC77hlbqiRnXXXqmMR4MrnGp5ExOh1Fjku3H_PaZKG_qM0Bs1cumjs1r9A9FFvwR-EBY5KprS0tApLZdhiYuP7IqxJtMmIRQnvWSaLa0TQ=w1920-h1080"></object>
+                    <object data="https://lh3.googleusercontent.com/k81UQ_lFDa-jVZ2ymrJsJOljj3Wv2J53AvwajysamFlivZUWhhImP62tjC1x8gu1DXiH1PLGLW6Yj2QkNoWcxvBBvMSvUYoNWgYuIh0x8X_TwBECi97Gadev23k0t9P3uYtd1axc0Q=w1920-h1080"></object>
+                    <object data="https://lh3.googleusercontent.com/pQufaHIeRb8aZ65OS3ooyEC_ZLbJL4ybPStytQun3GbS2aBuM8ZGTe_RJYZHS91gj3-yhEqmJNAemC3FfAzBnQOf6SduRGOrduAEO9-sSWResPIdN4Qp1TChZwFzNbZLveqGu3NW7A=w1920-h1080"></object>
+                    <object data="https://lh3.googleusercontent.com/Htw9Cw82H-2r77P5sTNWlKiOHzB-VeMa2ukH4xYisJxcr7SeqwCcAJEMVbMJL0KCuBrbUdtaMk8KcxOXzpHy8D4P_xosOb1OMVfrxHCWMsY3PllBl_kUnWUlBah49drLN9OQ4r0paw=w1920-h1080"></object>
+                    <object data="https://lh3.googleusercontent.com/WT2cjLPJPLBcNDbwEqwrqyVJYEdEl1dfQUkKXFdEV8mLYHZFzrS8Q2FRBfGkc0qCyGwL5KSc5EQdrLJWPwyOx1t_FZhT0bc6DM3MI5TQf9yTjjeZbnRPQl7QVqna-4O28dEqPBmmwg=w1920-h1080"></object>
+                    <object data="https://lh3.googleusercontent.com/tOORL24KMiXe8g7Kry6_b0FvQLbWLi7_Q3_n44PUvyuQAS1lJV7zXexQI5FpbX1i7GmjA-xNJ922tteqQhQcH44saPQxirOnwTBddKmqYAAQToLWuJ63RuDD1BvrGRKbgJc6gFVPKw=w1920-h1080"></object>
+                    <object data="https://lh3.googleusercontent.com/2gMkIxpPPT5OYqOzezxEUDRmFOxLDrL3oInFeq3SAah7W2jNWLQSAdPx5GnrucquJutRPpDux_--SRKqR0igAyC7v2tusr_7lJesYxuvziuuYyxa2OITmxDScHp-uKwHQKT7ux-F0Q=w1920-h1080"></object>
+                    <object data="https://lh3.googleusercontent.com/vgaaHB1drck7rlrlZItE2MZs4_A6fl94csdznL2AMJSC54QgXKs-InoZdaqdO7ZEGLOH6X85Vi9RLBCygvcHkWoFVvkOEUjOAKJU-BDw4FV3b6nDR3Sxfv0WSph1YXhboLREEDliaA=w1920-h1080"></object>
+                    <object data="https://lh3.googleusercontent.com/CK0wrIdYQBY2ULa7UJu4T57sTkqr3mVF7lvkQoZu1-4odHy5bwO2DY-awT1jiAe3zmU6-T8JBCnPgleJe5V57o-nfYRyjEYvPxWYRebWM6RydVwL95JH-Lj24zsUIcXqJobyC6PLEQ=w1920-h1080"></object>
+                    <object data="https://lh3.googleusercontent.com/Sahrft-KoRrZPOzTaU85mn_33AzRnHQXf1_LVWmef5DPSFoHYQssq_ozky_cExohWIZdyadceyPRWDX-uYvH7oCtbN03sBm0Tsav-bmh6BSL7UJiDBW4GceJIid-fvzh9bPJwKhcvg=w1920-h1080"></object>
+                    <object data="https://lh3.googleusercontent.com/PMgVF8zqA-x733aq0FCuRLiUvRN9kvzJfdghg6-4hdhqcVuKpIukPv5N5k3EGaAeMtFj8xqiR4OQfyZbTS2g7uhbm1So03o6cxWlCT4CgDsolCzm6vmEuhe2k5zJrLwItYBmckUJIw=w1920-h1080"></object>
+                    <object data="https://lh3.googleusercontent.com/dDfD3SBe2x-_KfjMki940JHyyoCcCjoB4qMoqm3bBfxjW4tKhlVq0PEvLhNBTQJVA66EU-mSfCIEGuP3i0ACBwr_TSne5pi30of90vjFWwR6sx49scp6_1YG3EEfPJiKjS9srX2Xyg=w1920-h1080"></object>
+                    <object data="https://lh3.googleusercontent.com/eCHTeAVXY58J_YjIYCVj7B3HQxVt-rK0i8VeOQdn8q27f7Qltv-ljYnW9l7TRTSasU-kkRKAO8m9BGpIDU35wjcrPSY4iquQdaQqcbOfLLbjUfqeHZCh-XUKeQJMUoGMks4F1DlyGQ=w1920-h1080"></object>
+                    <object data="https://lh3.googleusercontent.com/oHfQOCFxhs6Jj4BXTYjy3-QCo7UCo3TbW7t5Lb_uvupKyZLpXtT-xGsDoBkURLKno1zuLh-s3AUw3KeS1aVotD4Vk6k5nrHpfk31dHEe5eQ1-09LPdhUfVD9Fs5HchmQGQ19QDVzZg=w1920-h1080"></object>
+                    <object data="https://lh3.googleusercontent.com/3MFLnvEaZDf4Rt67WSPeaXdhsWd_yDXIgKuH3FptmEqiLrA4wHJ-tevsJpiWAhw-RXX_eTvQVXDP0YOt2-U7cbMarfI559DTrPl0S5VQNZ3aET_YGVg0Gxj_TbMWJ_t3h684BlSsMg=w1920-h1080"></object>
+                </div> 
+                <object type="text/html" data="https://photos.app.goo.gl/vuUPCHiuH2qbmkkx8"></object>
+            </div>
+        </aside>
+        
+        <!-- ----------------------------------------------------Right -- Profile card ---------- -->
+        <div id="profile-div" class="flex col gap">
+            <div class="flex space-between gap-s bkg-clr bd-r pad">
+                <div class="flex col gap" id="about">
+                    <div>
+                        <h2>About me</h2>
+                        <p>I am a developer wtih a mechanical background. I love to build projects from 
+                            websites to houses and cars! 
+                        
+                        </p>
+                    </div>
+                    <div>
+                        <h2>Languages</h2>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Python</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container flex col">
+                    <img src="./images/IMG_20230425_124635.jpg" alt="Profile-picture" id="profile-pic">
+                    <span class="overlay">Hello!</span>
+                </div>
+            </div>
+            <div id="work" class="bkg-clr bd-r pad-s pad-tb info-card">
+                <details open>
+                    <summary>
+                        <h2>Work Experience</h2>
+                    </summary>
+                    <ul class="flex col gap-s">
+                        <li>
+                            <h4>General Contractor / Owner</h4>
+                            <span>K.mabb constrution</span>
+                            <p>Scope of work included remodels, new construction and light commercial 
+                                projects. Skills include framing (wood or steel stud), tile, flooring, 
+                                finish work and cabinetry. </p>
+                        </li>
+                        <li>
+                            <h4>Outside Machinist / Mechanic (nuclear)</h4>
+                            <span>Puget Sound Naval Shipyard</span>
+                            <p>Ability to perform tests, inspections, repairs, maintenence and replacement
+                                of components including valves, pumps, motors and ventilation.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>Automotive Mechanic</h4>
+                            <span>Nissan of Fife</span>
+                            <p>Diagnosed customer concerns, fixed the problems in a safe and time-sensitive
+                                manor. Documented all causes and corrections on proper paperwork.</p>
+                        </li>
+                    </ul>
+                </details>
+            </div>
+            <div id="school" class="bkg-clr bd-r pad-s pad-tb info-card">
+                <details>
+                    <summary>
+                        <h2>Education</h2>
+                    </summary>
+                    <ul class="flex col gap-s">
+                        <li>
+                            <h4>Coding Dojo</h4>
+                            <span>Full Stack software developer</span>
+                            <p>Learn to work with multiple languages including HTML, CSS, 
+                                JavaScript, Python, C# and more...</p>
+                        </li>
+                        <li>
+                            <h4>Universal Technical Institute</h4>
+                            <span>Automotive Mechanic</span>
+                            <p>Taught the ability to diagnose and repair many component such as 
+                                electrical, hydraulics, engines and suspension
+                            </p>
+                        </li>
+                        <li>
+                            <h4>North Kitsap High School</h4>
+                            <span>Highschool</span>
+                            <p>Graduated with highschool diploma.
+                            </p>
+                        </li>
+                    </ul>
+                </details>
+            </div>
+        </div>
+    </main>
+    <footer id="footer" class="center">
+        <p>Contact Me!</p>
+        <ul class="flex space-between align">
+            <li class="flex align gap-s">
+                <img src="./images/email_318-304876.avif" alt="Emaill logo">
+                <a href="mailto:kmabbott9@gmail.com">Email</a>
+            </li>
+            <li class="flex align gap-s">
+                <img src="./images/github1.png" alt="Github-logo">
+                <a href="https://github.com/k-mabbott">Github</a>
+            </li>
+            <li class="flex align gap-s">
+                <img src="./images/codewars.png" alt="Linked in logo" id="code-wars">
+                <a href="https://www.codewars.com/users/k-mabbott">Code Wars</a>
+            </li>
+            <li class="flex align gap-s">
+                <img src="./images/linkedin.png" alt="Linked in logo" id="linkedin">
+                <a href="https://www.linkedin.com/in/kyle-mabbott-972a32238/">LinkedIn</a>
+            </li>
+        </ul>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

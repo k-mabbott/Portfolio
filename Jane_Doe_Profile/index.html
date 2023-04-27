@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jane Doe Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="flex-align">
+        <ul id="nav-left" class="flex-align">
+            <li><h2>Profile</h2></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">My Profile</a></li>
+            <li><a href="#">Find Connections</a></li>
+        </ul>
+        <button type="button">Sign Out</button>
+    </nav>
+    <main class="flex" >
+        <div id="left" class="col flex" >
+            <div>
+                <div id="profile-top" class="card-top" >
+                    <img id="profile-pic" src="images/user-circle.png" alt="Jane Doe">
+                </div>
+                <div id="profile-info" class="card-info left-info">
+                    <h2 id="profile-name">Jane Doe</h2>
+                    <div class="flex-align">
+                        <img class="logo" src="images/map-marker.png" alt="Location Marker">
+                        <p>Seattle</p>
+                    </div>
+                    <p>Developer | Engineer | Problem Solver</p>
+                    <p>Master of shadows and the Internet!</p>
+                    <div class="flex-align">
+                        <img class="logo" src="images/gear.png" alt="Gear Icon">
+                        <a href="#" onclick="changeName('profile-name')">edit profile</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card-top">
+                    <h4>Education</h4>
+                </div>
+                <div class="card-info left-info">
+                    <div>
+                        <h4>Coding Dojo - Full Stack Bootcamp</h4>
+                    </div>
+                    <p class="dates">Dec 2019 - Mar 2020</p>
+                    <p class="belts">Triple black belt in python, MERN, and C#</p>
+                </div>
+            </div>
+        </div>
+        <div id="right" class="col flex" >
+            <div>
+                <div class="card-top flex" >
+                    <p id="two">2</p>
+                    <h4>Connection Requests</h4>
+                </div>
+                <ul class="card-info right-info">
+                    <li class="requests flex-align">
+                        <img class="contacts" src="images/todd-s.jpg" alt="Todd E">
+                        <p class="contact" >Todd E</p> 
+                        <img class="accept" src="images/accept-circle.png" alt="Accept" onclick="friendRequestAccpt(this)">
+                        <img src="images/close-circle.png" alt="Decline" onclick="friendRequestDecl(this)">
+                    </li>
+                    <li class="requests flex-align">
+                        <img class="contacts" src="images/phil-s.jpg" alt="Phil K">
+                        <p class="contact">Phil K</p>
+                        <img class="accept" src="images/accept-circle.png" alt="Accept" onclick="friendRequestAccpt(this)">
+                        <img src="images/close-circle.png" alt="Decline" onclick="friendRequestDecl(this)">
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div class="card-top flex" >
+                    <p id="five-hundred">500</p>
+                    <h4>Your Connections</h4>
+                </div>
+                <ul class="card-info right-info">
+                    <li class="requests flex-align">
+                        <img class="contacts" src="images/adrien-s.jpg" alt="Adrian D">
+                        <p class="contact">Adrien D</p>
+                    </li>
+                    <li class="requests flex-align">
+                        <img class="contacts" src="images/anne-s.jpg" alt="Anne J">
+                        <p class="contact">Annie J</p>
+                    </li>
+                    <li class="requests flex-align">
+                        <img class="contacts" src="images/alayne-s.jpg" alt="Alayne T">
+                        <p class="contact">Alayne T</p>
+                    </li>
+                    <li class="requests flex-align">
+                        <img class="contacts" src="images/arry-s.jpg" alt="Arry Y">
+                        <p class="contact">Arry Y</p>
+                    </li>
+                </ul>
+                <a id="view-more" class="card-info right-info" href="#">View More</a>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Nunito', sans-serif;
+}
+/* ------Generic Classes------ under 150 */
+.flex{
+    display: flex;
+}
+.flex-align {
+    display: flex;
+    align-items: center;
+}
+.col {
+    flex-direction: column;
+    gap: 2rem;
+}
+/* ----------Nav---------- */
+nav{
+    background-color: black;
+    justify-content: space-between;
+    padding: 0.3rem 2rem;
+}
+nav ul{
+    gap: 2rem;
+    color: whitesmoke;
+    list-style: none;
+}
+nav li a{
+    text-decoration: none;
+    color:whitesmoke;
+}
+nav button{
+    background-color: deepskyblue;
+    border: none;
+    color: whitesmoke;
+    font-weight: 500;
+    padding: 2px;
+}
+
+/* ---------Main--------- */
+main{
+    padding: 2rem 2rem;
+    gap: 2rem;
+    background-color:rgba(255, 255, 255, 0.822)
+}
+.card-info{
+    border: 2px solid slategray;
+    border-top: none;
+}
+.card-top {
+    background-color: #333333;
+    padding: 0.5rem;
+    color:whitesmoke
+}
+.contact {
+    flex:1
+}
+/* -------Left------- */
+#left{
+    flex:2
+}
+.left-info {
+    padding: 1rem;
+}
+#profile-top{
+    background-color: #17a2b8;
+    padding: 0;
+}
+#profile-info{
+    padding-top: 2.2rem;
+}
+/* ----------Right---------- */
+#right{
+    flex:1;
+    gap: 2rem
+}
+.right-info {
+    padding: 0.5rem;
+}
+#view-more{
+    display: block;
+}
+.requests{
+    padding: 0.1rem 0;
+}
+/* -----------Images-------- */
+.logo{
+    height: 1rem;
+    padding: 0.5rem 0.5rem;
+    padding-left: none;
+}
+#profile-pic {
+    height: 5rem;
+    position: relative;
+    top: 2.5rem;
+    left: 1rem;
+}
+img{
+    height: 3rem;
+}
+#two{
+    background-color: #cccccc;
+    border-radius: 50%;
+    width: 1.3rem;
+    height: 1rem;
+    text-align: center;
+    padding-bottom: 0.2rem;
+    margin-right: 0.5rem;
+    color: black;
+}
+#five-hundred {
+    background-color: #cccccc;
+    border-radius: 75%;
+    width: 3rem;
+    height:1.2rem;
+    text-align: center;
+    padding-bottom: 0.1rem;
+    margin-right: 0.5rem;
+    color: black;
+}
+.accept{
+    margin-right: 0.2rem;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-------------------------------------------- Nav -->
+    <nav class="flex align space-between">
+        <h1>DojoWeather</h1>
+        <ul class="flex gap">
+            <li><a href="#" onclick="loading()" >Burbank</a></li>
+            <li><a href="#" onclick="loading()">Chicago</a></li>
+            <li><a href="#" onclick="loading()">Dallas</a></li>
+        </ul>
+    </nav>
+    <!-------------------------------------------- Main -->
+    <main>
+        <header class="flex align space-between pad">
+            <h2>San Jose</h2>
+            <div>
+                <label for="temp-selector">Show temperature in</label>
+                <select name="temp" id="temp-selector" autocomplete="off" class="border" onchange="changeTemp(this.value)">
+                    <option value="farenheit">°F</option>
+                    <option value="celcius">°C</option>
+                </select>
+            </div>
+        </header>
+        <div class="flex space-between">
+            <!-------------------------------------------- Weather Blocks -->
+            <div class="center weather-blocks flex col gap">
+                <h3>Today</h3>
+                <img src="assets/some_rain.png" alt="Some rain">
+                <p>some rain</p>
+                <div class="flex space-between temps">
+                    <span class="high" id="high1">75</span>
+                    <span class="low" id="low1">65</span>
+                </div>
+            </div>
+            <div class="center weather-blocks flex col gap">
+                <h3>Tomorrow</h3>
+                <img src="assets/some_sun.png" alt="Some sun">
+                <p>some sun</p>
+                <div class="flex space-between temps">
+                    <span class="high" id="high2">80</span>
+                    <span class="low" id="low2">66</span>
+                </div>
+            </div>
+            <div class="center weather-blocks flex col gap">
+                <h3>Friday</h3>
+                <img src="assets/some_clouds.png" alt="Some clouds">
+                <p>some clouds</p>
+                <div class="flex space-between temps">
+                    <span class="high" id="high3">69</span>
+                    <span class="low" id="low3">61</span>
+                </div>
+            </div>
+            <div class="center weather-blocks flex col gap">
+                <h3>Saturday</h3>
+                <img src="assets/some_sun.png" alt="Some sun">
+                <p>some sun</p>
+                <div class="flex space-between temps">
+                    <span class="high" id="high4">78</span>
+                    <span class="low" id="low4">70</span>
+                </div>
+            </div>
+        </div>
+        <!-------------------------------------------- Cookie bar -->
+        <div class="flex align border" id="cookie-bar">
+            <img src="assets/cookie.png" alt="Cookie" id="cookie">
+            <div>
+                <h4>Stop! Cookie time</h4>
+                <p>We use cookies (sadly not the edible ones) to personalize conent and ads, 
+                    to provide social media features and to analyse our traffic. 
+                    <a href="#">Read more...</a>
+                </p>
+            </div>
+            <button type="button" onclick="this.parentNode.remove()" id="cookies-btn" class="border">I Accept</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
