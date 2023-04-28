@@ -47,7 +47,7 @@ img[alt="stick-figure"]:hover {
 @keyframes run {
     from {left: 0px;}
     to {left: 120%;}
-}
+} 
 
 /* -------------------------------------Nav-------------------------- */
 #nav {
