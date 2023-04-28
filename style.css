@@ -50,14 +50,14 @@ img[alt="stick-figure"]:hover {
 }
 
 /* -------------------------------------Nav-------------------------- */
-nav {
+#nav {
     background-color:rgb(36, 39, 41);
     padding: 0.2rem 5%;
     position: sticky;
     top: 0;
-    z-index: 4;
+    z-index: 3;
 }
-nav ul li a{
+#nav li a{
     text-decoration: none;
     color: whitesmoke;
 }
@@ -114,6 +114,7 @@ aside h3{
 .img-div {
     height: inherit;
     overflow: scroll;
+    z-index: 10;
 }
 .pop-up-card-btn {
     background-color: rgb(170, 21, 21);

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-    <!-- ----------------------------------------------Nav--------------- -->
+    <!-- -------------------------------------------Header-/---------------- -->
     <header id="home" class="flex align gap" onclick="goRun()">
         <div>
             <h2>Kyle</h2>
@@ -19,14 +19,14 @@
             <img src="./images/stick-figure.gif" id="runner" alt="stick-figure">
         </div>
     </header>
-    <nav class="flex space-evenly align">
-        <ul class="flex gap ">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#footer">Contact Me</a></li>
-        </ul>
-    </nav>
+    <!-- --------------------------------------------NAV---------------- -->
+    <ul class="flex gap align space-around" id="nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#footer">Contact Me</a></li>
+    </ul>
+    <!-- ------------------------Main------------ -->
     <main class="flex gap">
         <aside class="flex col gap">
             <!-- ---------------------------------------------------Aside -- & -- GetBacon ---------------------- -->
@@ -39,7 +39,7 @@
                     <div id="bacon-card" class="flex col gap panel">
                             <div class="flex col align">
                                 <label for="amount-input">How many <span id="format-span"></span></label>
-                                <input type="number" oninput="getAmount(this)" id="amount-input">
+                                <input type="number" oninput="getAmount(this)" id="amount-input" placeholder="3">
                             </div>
                             <div class="flex col align gap">
                                 <label for="filler-selector">
@@ -93,17 +93,17 @@
                             <input type="number" id="img-y" placeholder="Y in pixels(eg.200)">
                         </div>
                         <button type="button" id="image-search" onclick="getImage()">Get Image!</button>
-                        <div id="image-div" class="flex col border gap align center pop-up-card">
-                            <div class="flex space-between">
-                                <span>Here is your image</span>
-                                <button type="button" id="random-img-close" onclick="hide(this)" class="pop-up-card-btn">X</button>
-                            </div>
-                            <div class="img-div">
-                                <img src="#" alt="Your picture" id="random-image">
-                            </div>
-                        </div>
                     </div>
                 </details>
+                <div id="image-div" class="pop-up-card flex col border gap align center">
+                    <div class="flex space-between">
+                        <span>Here is your image</span>
+                        <button type="button" id="random-img-close" onclick="hide(this)" class="pop-up-card-btn">X</button>
+                    </div>
+                    <div class="img-div">
+                        <img src="./images/loading.gif" alt="Your picture" id="random-image">
+                    </div>
+                </div>
             </div>
             <!-- -----------------------------------------------------Projects------------ -->
             <div id="projects" class="flex col gap-m bkg-clr bd-r pad-s pad-tb align">
