@@ -131,6 +131,16 @@ aside h3{
 #pacman {
     border-radius: 0;
 }
+.gitLink {
+    color: black;
+    font-size: 1.2rem;
+    text-decoration: none;
+    background-color: darkgrey;
+    padding: 0.5rem 1rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    margin: 0.5rem auto;
+}
 /* --------------------------------------- projects------------ */
 
 .filler-tools {
@@ -200,7 +210,6 @@ details[open] > summary:before {
     transition: 0.45s transform ease;
     transform: rotate(90deg);
 }
-
 
 /* ---------------------------------------profile div------------- */
 #about ul li {
