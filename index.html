@@ -108,6 +108,23 @@
             <!-- -----------------------------------------------------Projects------------ -->
             <div id="projects" class="flex col gap-m bkg-clr bd-r pad-s pad-tb align">
                 <h3>Projects</h3>
+                <button type="button" id="Kmabb" class="projects flex" onmouseover="hoverProject(this)" onmouseout="hoverProjectOut(this)" >Kmabb Construction (Deployed)</button>
+                <img src="./images/Kmabb.png" alt="Kmabb Construction" class="preview">
+                <div id="pokedex" class="flex col pop-up-card">
+                    <div class="flex space-between align">
+                        <span>Faux pokedex app built with react</span>
+                        <button type="button" onclick="hide(this)" class="pop-up-card-btn">X</button>
+                    </div>
+                    <div style="position:relative;width:fit-content;height:fit-content;margin:1rem auto;">
+                        <a style="position:absolute;top:20px;right:1rem;opacity:0.8;" href="https://clipchamp.com/watch/oAmBnyJu7yD?utm_source=embed&utm_medium=embed&utm_campaign=watch">
+                            <img loading="lazy" style="height:22px;" src="https://clipchamp.com/e.svg" alt="Made with Clipchamp" />
+                        </a>
+                        <iframe allow="autoplay;" allowfullscreen style="border:none" src="https://clipchamp.com/watch/oAmBnyJu7yD/embed" width="720" height="420"></iframe>
+                    </div>
+                    <p class="flex">
+                        <a class="gitLink" href="https://github.com/k-mabbott/Pokedex">View project on Github</a>
+                    </p>
+                </div>
                 <!-- -----------------------------------------------------Pokedex-------------->
                 <button type="button" class="projects flex" onmouseover="hoverProject(this)" onmouseout="hoverProjectOut(this)" onclick="showProject(this)">Pokedex app</button> 
                 <img src="./images/newPokedex7mb.gif" alt="Pokedex" class="preview">
@@ -237,19 +254,18 @@
             <div class="flex space-between gap-s bkg-clr bd-r pad">
                 <div class="flex col gap" id="about">
                     <div>
-                        <h2>About me</h2>
+                        <h2 class="bold">About me</h2>
                         <p>Hello!
-                            I recently graduated the Coding Dojo full-time software engineering boot camp. I have experience with HTML, CSS, JavaScript and Python. I have had a passion for technology as long as I can remember. My background of construction and being an automotive technician both revolved around being able to take things apart to understand how they are built and work. As I have grown as a developer I have realized how much my past experience has help me with even problem solving in my own code.
+                            I recently graduated from the Coding Dojo software engineering boot camp. I have experience working with HTML, CSS, JavaScript, C# and Python. I have had a passion for technology and problem solving for as long as I can remember. My background in construction and working as an automotive technician have revolved around me being able to take things apart to understand how they are built and work. As I have grown as a developer I have realized how much my past experience has help me with even problem solving in my own code. Wether it be a house, car or a good program they all start with a stong foundation and are built to last!
                         </p>
                     </div>
                     <div>
-                        <h2>Languages</h2>
+                        <h2 class="bold">Languages and Tools</h2>
                         <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                            <li>Python</li>
-                            <li>C#</li>
+                            <li><span class="bold">Languages:</span> HTML, CSS, JavaScript(ES6, Node.js), Python, C#, MySQL</li>
+                            <li><span class="bold">Frameworks/Libraries:</span> Flask, Jinja, Mongoose, React, Express, JQuerry, Axios, ASP.NET, .NET core, Socket.io, Razor, JSX, AWS EC2, Bootstrap</li>
+                            <li><span class="bold">Databases:</span> MySQL, MongoDB</li>
+                            <li><span class="bold">Programs:</span> VSCode, Postman, MySQL Workbench, Terminal, Git/Github</li>
                         </ul>
                     </div>
                 </div>
@@ -265,24 +281,33 @@
                     </summary>
                     <ul class="flex col gap-s">
                         <li>
-                            <h4>General Contractor / Owner</h4>
+                            <h4 class="bold">General Contractor / Owner</h4>
                             <span>K.mabb constrution</span>
-                            <p>Scope of work included remodels, new construction and light commercial 
-                                projects. Skills include framing (wood or steel stud), tile, flooring, 
-                                finish work and cabinetry. </p>
+                            <ul class="m-s-s">
+                                <li>Communicated with multiple home owners and various assist trades to coordinate times and schedules</li>
+                                <li>Solved complex problems working with other contractors on house design and building approaches. To achieve  the safest and most time efficient approach.</li>
+                                <li>Experience in leading projects with multiple workers under my supervision. Keeping them safe and busy with relevant work to achieve the goal. </li>
+                            </ul>
                         </li>
                         <li>
-                            <h4>Outside Machinist / Mechanic (nuclear)</h4>
+                            <h4 class="bold" >Outside Machinist / Mechanic (nuclear)</h4>
                             <span>Puget Sound Naval Shipyard</span>
-                            <p>Ability to perform tests, inspections, repairs, maintenence and replacement
-                                of components including valves, pumps, motors and ventilation.
-                            </p>
+                            <ul class="m-s-s">
+                                <li>Demonstrated the ability to repair, replace, maintain, inspect and test nuclear components such as valves, ventilation, pumps and engines under strict guidelines.</li>
+                                <li>Documented any deficiencies found while the work was being performed and reported to the appropriate personnel per case issue.</li>
+                                <li>Acquired many qualifications from precision measuring to cleanliness levels of nuclear systems.</li>
+                            </ul>
                         </li>
                         <li>
-                            <h4>Automotive Mechanic</h4>
+                            <h4 class="bold" >Automotive Mechanic</h4>
                             <span>Nissan of Fife</span>
-                            <p>Diagnosed customer concerns, fixed the problems in a safe and time-sensitive
-                                manor. Documented all causes and corrections on proper paperwork.</p>
+                            <ul class="m-s-s">
+                                <li>Developed exceptional organizational and planning skills.
+                                    <li>Ability to follow instructions well and make decisions with little to no supervision.</li>
+                                    <li>Comfortable in fast paced high stress situations requiring attention to detail.</li>
+                                    <li>Diagnose and repair electrical systems using digital multimeters and oscilloscopes.</li>
+                                    <li>Experience working with hydraulic and pressurized systems in a safe manor.</li>
+                            </ul>
                         </li>
                     </ul>
                 </details>
@@ -294,20 +319,27 @@
                     </summary>
                     <ul class="flex col gap-s">
                         <li>
-                            <h4>Coding Dojo</h4>
+                            <h4 class="bold" >Coding Dojo</h4>
                             <span>Full Stack software developer</span>
-                            <p>Learn to work with multiple languages including HTML, CSS, 
-                                JavaScript, Python, C# and more...</p>
+                            <p>Coding Dojo is an immersive web development program specialized in teaching full stack development to train students to excel in the professional software development field — from front-end user experience to back-end to data storage.</p>
+                            <ul>
+                                <li>Accumulated 1,000+ hours of intensive programming coursework, including building, testing, and debugging in Python, C#, and MERN.</li>
+                                <li>200+ hours of full stack development on web apps and other technical projects.</li>
+                                <li>Remote pair programming experience.</li>
+                                <li>Languages: Python, C#, JavaScript, HTML, CSS, MySQL.</li>
+                                <li>Libraries/Frameworks: Flask, MongoDB, Express, React, Node.js, Mongoose, ASP.NET, .NET Core.</li>
+                                <li>Programs: VSCode, MySQL Workbench, Postman (API Testing).</li>
+                            </ul>
                         </li>
                         <li>
-                            <h4>Universal Technical Institute</h4>
+                            <h4 class="bold" >Universal Technical Institute</h4>
                             <span>Automotive Mechanic</span>
                             <p>Taught the ability to diagnose and repair many component such as 
                                 electrical, hydraulics, engines and suspension
                             </p>
                         </li>
                         <li>
-                            <h4>North Kitsap High School</h4>
+                            <h4 class="bold" >North Kitsap High School</h4>
                             <span>Highschool</span>
                             <p>Graduated with highschool diploma.
                             </p>

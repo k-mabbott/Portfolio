@@ -50,6 +50,9 @@ input[type=number] {
 .pad-s{
     padding: 0.5rem;
 }
+.m-s-s {
+    margin-left: 0.5rem;;
+}
 .pad-tb{
     padding-top: 1rem;
     padding-bottom: 1rem;

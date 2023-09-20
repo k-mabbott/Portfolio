@@ -72,13 +72,13 @@ async function getBacon() { //https://baconipsum.com/api/?type=all-meat&sentence
     const url = `https://baconipsum.com/api/?type=${meatAndFiller}&${format}=${amount}${lorem}`
     const res = await fetch(url);
     const data = await res.json();
-    console.log(url)
+    // console.log(url)
     const paras = []
     for (var i = 0; i < data.length ; i++){
         paras.push(data[i])
         paras.push('<br><br>')
     }
-    console.log(data)
+    // console.log(data)
     document.getElementById('bacon').innerHTML = paras
 }  
 
@@ -141,6 +141,10 @@ document.addEventListener('mousemove', evt => {
     root.style.setProperty('--mouse-x', x);
     root.style.setProperty('--mouse-y', y);
 });
+
+document.getElementById("Kmabb").onclick = () => {
+    window.location = "http://www.kmabbconstruction.com";
+};
 
 
 // ------------------------------ --Footer-- --------------------
