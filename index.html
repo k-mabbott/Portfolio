@@ -108,21 +108,20 @@
             <!-- -----------------------------------------------------Projects------------ -->
             <div id="projects" class="flex col gap-m bkg-clr bd-r pad-s pad-tb align">
                 <h3>Projects</h3>
-                <button type="button" id="Kmabb" class="projects flex" onmouseover="hoverProject(this)" onmouseout="hoverProjectOut(this)" >Kmabb Construction (Deployed)</button>
+                <!-- -----------------------------------------------------Kmabb Const-------------->
+                <button type="button" id="Kmabb" class="projects flex" onmouseover="hoverProject(this)" onmouseout="hoverProjectOut(this)" onclick="showProject(this)" >Kmabb Construction (Deployed)</button>
                 <img src="./images/Kmabb.png" alt="Kmabb Construction" class="preview">
                 <div id="pokedex" class="flex col pop-up-card">
                     <div class="flex space-between align">
-                        <span>Faux pokedex app built with react</span>
+                        <span>Website Built with ASP.NET, C#, Entity, Bootstrap and MySQL. Deployed on AWS EC2</span>
                         <button type="button" onclick="hide(this)" class="pop-up-card-btn">X</button>
                     </div>
-                    <div style="position:relative;width:fit-content;height:fit-content;margin:1rem auto;">
-                        <a style="position:absolute;top:20px;right:1rem;opacity:0.8;" href="https://clipchamp.com/watch/oAmBnyJu7yD?utm_source=embed&utm_medium=embed&utm_campaign=watch">
-                            <img loading="lazy" style="height:22px;" src="https://clipchamp.com/e.svg" alt="Made with Clipchamp" />
-                        </a>
-                        <iframe allow="autoplay;" allowfullscreen style="border:none" src="https://clipchamp.com/watch/oAmBnyJu7yD/embed" width="720" height="420"></iframe>
+                    <div style="position:relative;width:fit-content;height:fit-content;margin:1rem auto;" class="projImg">
+                        <img src="./images/Kmabb.png" alt="Kmabb Construction" height="420">
                     </div>
                     <p class="flex">
-                        <a class="gitLink" href="https://github.com/k-mabbott/Pokedex">View project on Github</a>
+                        <a class="gitLink" href="http://www.kmabbconstruction.com/">View project website</a>
+                        <a class="gitLink" href="https://github.com/k-mabbott/Kmabb">View project on Github</a>
                     </p>
                 </div>
                 <!-- -----------------------------------------------------Pokedex-------------->
@@ -130,7 +129,7 @@
                 <img src="./images/newPokedex7mb.gif" alt="Pokedex" class="preview">
                 <div id="pokedex" class="flex col pop-up-card">
                     <div class="flex space-between align">
-                        <span>Faux pokedex app built with react</span>
+                        <span>Pokedex app built with React/Boostrap</span>
                         <button type="button" onclick="hide(this)" class="pop-up-card-btn">X</button>
                     </div>
                     <div style="position:relative;width:fit-content;height:fit-content;margin:1rem auto;">
@@ -142,6 +141,25 @@
                     <p class="flex">
                         <a class="gitLink" href="https://pokedex-kmabb.vercel.app/">View project website</a>
                         <a class="gitLink" href="https://github.com/k-mabbott/Pokedex">View project on Github</a>
+                    </p>
+                </div>
+                <!-- -----------------------------------------------------Api List-------------->
+                <button type="button" class="projects flex" onmouseover="hoverProject(this)" onmouseout="hoverProjectOut(this)" onclick="showProject(this)">API Search app (Deployed)</button> 
+                <img src="./images/apiApp.png" alt="API app" class="preview">
+                <div id="apiApp" class="flex col pop-up-card">
+                    <div class="flex space-between align">
+                        <span>API list with live Filters using Vite/React Axios and Tailwindcss</span>
+                        <button type="button" onclick="hide(this)" class="pop-up-card-btn">X</button>
+                    </div>
+                    <div style="position:relative;width:fit-content;height:fit-content;margin:1rem auto;">
+                        <a style="position:absolute;top:20px;right:1rem;opacity:0.8;" href="https://clipchamp.com/watch/oAmBnyJu7yD?utm_source=embed&utm_medium=embed&utm_campaign=watch">
+                            <img loading="lazy" style="height:22px;" src="https://clipchamp.com/e.svg" alt="Made with Clipchamp" />
+                        </a>
+                        <iframe allow="autoplay;" allowfullscreen style="border:none" src="https://clipchamp.com/watch/oAmBnyJu7yD/embed" width="720" height="420"></iframe>
+                    </div>
+                    <p class="flex">
+                        <a class="gitLink" href="https://movie-app-delta-weld.vercel.app/">View project website</a>
+                        <a class="gitLink" href="https://github.com/k-mabbott/apiApp">View project on Github</a>
                     </p>
                 </div>
                 <!-- -----------------------------------------------------Platformer-------------->

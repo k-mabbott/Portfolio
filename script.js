@@ -142,9 +142,13 @@ document.addEventListener('mousemove', evt => {
     root.style.setProperty('--mouse-y', y);
 });
 
-document.getElementById("Kmabb").onclick = () => {
-    window.location = "http://www.kmabbconstruction.com";
-};
+// document.getElementById("Kmabb").onclick = () => {
+//     window.location = "http://www.kmabbconstruction.com";
+// };
+
+// document.getElementById("apiApp").onclick = () => {
+//     window.location = "http://www.kmabbconstruction.com";
+// };
 
 
 // ------------------------------ --Footer-- --------------------
