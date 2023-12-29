@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kyle Mabbott</title>
     <link rel="stylesheet" href="generic.css">
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- -------------------------------------------Header-/---------------- -->
     <header id="home" class="flex align gap" onclick="goRun()">
@@ -25,7 +27,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#footer">Contact Me</a></li>
-    </ul> 
+    </ul>
     <!-- ------------------------Main------------ -->
     <main class="flex gap">
         <aside class="flex col gap">
@@ -37,19 +39,19 @@
                         Bacon Ipsum Generator
                     </summary>
                     <div id="bacon-card" class="flex col gap panel">
-                            <div class="flex col align">
-                                <label for="amount-input">How many <span id="format-span"></span></label>
-                                <input type="number" oninput="getAmount(this)" id="amount-input" placeholder="3">
-                            </div>
-                            <div class="flex col align gap">
-                                <label for="filler-selector">
+                        <div class="flex col align">
+                            <label for="amount-input">How many <span id="format-span"></span></label>
+                            <input type="number" oninput="getAmount(this)" id="amount-input" placeholder="3">
+                        </div>
+                        <div class="flex col align gap">
+                            <label for="filler-selector">
                                 Only meats or meats with random 'lorem ispum' filler
                             </label>
                             <select name="filler-selector" id="filler-selector" onchange="getMeatAndFiller(this)">
                                 <option value="all-meat">All Meat</option>
                                 <option value="meat-and-filler">Meat and Filler</option>
                             </select>
-                        </div> 
+                        </div>
                         <div class="flex col align">
                             <label for="format-type">Do you want sentences or paragraphs</label>
                             <select name="format-type" id="format-type" onchange="getFormat(this)">
@@ -71,7 +73,7 @@
                         <div id="bacon">Bacon will appear here...</div>
                     </div>
                 </details>
-                    <!-- ----------------------------------------------Get Pics ------------------------------- -->
+                <!-- ----------------------------------------------Get Pics ------------------------------- -->
                 <details class="filler-tools">
                     <summary>Image Generator</summary>
                     <div id="image-card" class="flex col gap panel">
@@ -98,7 +100,8 @@
                 <div id="image-div" class="pop-up-card flex col border gap align center">
                     <div class="flex space-between">
                         <span>Here is your image</span>
-                        <button type="button" id="random-img-close" onclick="hide(this)" class="pop-up-card-btn">X</button>
+                        <button type="button" id="random-img-close" onclick="hide(this)"
+                            class="pop-up-card-btn">X</button>
                     </div>
                     <div class="img-div">
                         <img src="./images/loading.gif" alt="Your picture" id="random-image">
@@ -109,14 +112,17 @@
             <div id="projects" class="flex col gap-m bkg-clr bd-r pad-s pad-tb align">
                 <h3>Projects</h3>
                 <!-- -----------------------------------------------------Kmabb Const-------------->
-                <button type="button" id="Kmabb" class="projects flex" onmouseover="hoverProject(this)" onmouseout="hoverProjectOut(this)" onclick="showProject(this)" >Kmabb Construction (Deployed)</button>
+                <button type="button" id="Kmabb" class="projects flex" onmouseover="hoverProject(this)"
+                    onmouseout="hoverProjectOut(this)" onclick="showProject(this)">Kmabb Construction
+                    (Deployed)</button>
                 <img src="./images/Kmabb.png" alt="Kmabb Construction" class="preview">
                 <div id="pokedex" class="flex col pop-up-card">
                     <div class="flex space-between align">
                         <span>Website Built with ASP.NET, C#, Entity, Bootstrap and MySQL. Deployed on AWS EC2</span>
                         <button type="button" onclick="hide(this)" class="pop-up-card-btn">X</button>
                     </div>
-                    <div style="position:relative;width:fit-content;height:fit-content;margin:1rem auto;" class="projImg">
+                    <div style="position:relative;width:fit-content;height:fit-content;margin:1rem auto;"
+                        class="projImg">
                         <img src="./images/Kmabb.png" alt="Kmabb Construction" height="420">
                     </div>
                     <p class="flex">
@@ -125,7 +131,8 @@
                     </p>
                 </div>
                 <!-- -----------------------------------------------------Pokedex-------------->
-                <button type="button" class="projects flex" onmouseover="hoverProject(this)" onmouseout="hoverProjectOut(this)" onclick="showProject(this)">Pokedex app (Deployed)</button> 
+                <button type="button" class="projects flex" onmouseover="hoverProject(this)"
+                    onmouseout="hoverProjectOut(this)" onclick="showProject(this)">Pokedex app (Deployed)</button>
                 <img src="./images/newPokedex7mb.gif" alt="Pokedex" class="preview">
                 <div id="pokedex" class="flex col pop-up-card">
                     <div class="flex space-between align">
@@ -133,10 +140,13 @@
                         <button type="button" onclick="hide(this)" class="pop-up-card-btn">X</button>
                     </div>
                     <div style="position:relative;width:fit-content;height:fit-content;margin:1rem auto;">
-                        <a style="position:absolute;top:20px;right:1rem;opacity:0.8;" href="https://clipchamp.com/watch/oAmBnyJu7yD?utm_source=embed&utm_medium=embed&utm_campaign=watch">
-                            <img loading="lazy" style="height:22px;" src="https://clipchamp.com/e.svg" alt="Made with Clipchamp" />
+                        <a style="position:absolute;top:20px;right:1rem;opacity:0.8;"
+                            href="https://clipchamp.com/watch/oAmBnyJu7yD?utm_source=embed&utm_medium=embed&utm_campaign=watch">
+                            <img loading="lazy" style="height:22px;" src="https://clipchamp.com/e.svg"
+                                alt="Made with Clipchamp" />
                         </a>
-                        <iframe allow="autoplay;" allowfullscreen style="border:none" src="https://clipchamp.com/watch/oAmBnyJu7yD/embed" width="720" height="420"></iframe>
+                        <iframe allow="autoplay;" allowfullscreen style="border:none"
+                            src="https://clipchamp.com/watch/oAmBnyJu7yD/embed" width="720" height="420"></iframe>
                     </div>
                     <p class="flex">
                         <a class="gitLink" href="https://pokedex-kmabb.vercel.app/">View project website</a>
@@ -144,7 +154,8 @@
                     </p>
                 </div>
                 <!-- -----------------------------------------------------Api List-------------->
-                <button type="button" class="projects flex" onmouseover="hoverProject(this)" onmouseout="hoverProjectOut(this)" onclick="showProject(this)">API Search app (Deployed)</button> 
+                <button type="button" class="projects flex" onmouseover="hoverProject(this)"
+                    onmouseout="hoverProjectOut(this)" onclick="showProject(this)">API Search app (Deployed)</button>
                 <img src="./images/apiApp.png" alt="API app" class="preview">
                 <div id="apiApp" class="flex col pop-up-card">
                     <div class="flex space-between align">
@@ -160,7 +171,8 @@
                     </p>
                 </div>
                 <!-- -----------------------------------------------------Platformer-------------->
-                <button type="button" class="projects flex" onmouseover="hoverProject(this)" onmouseout="hoverProjectOut(this)" onclick="showProject(this)">2D Platformer</button> 
+                <button type="button" class="projects flex" onmouseover="hoverProject(this)"
+                    onmouseout="hoverProjectOut(this)" onclick="showProject(this)">2D Platformer</button>
                 <img src="./images/ninjaGif.gif" alt="Ninja Platformer" class="preview">
                 <div id="platformer" class="flex col pop-up-card">
                     <div class="flex space-between align">
@@ -168,17 +180,22 @@
                         <button type="button" onclick="hide(this)" class="pop-up-card-btn">X</button>
                     </div>
                     <div style="position:relative;width:fit-content;height:fit-content;margin:1rem auto;">
-                        <a style="position:absolute;top:20px;right:1rem;opacity:0.8;" href="https://clipchamp.com/watch/rp202YHUD4l?utm_source=embed&utm_medium=embed&utm_campaign=watch">
-                            <img loading="lazy" style="height:22px;" src="https://clipchamp.com/e.svg" alt="Made with Clipchamp" />
+                        <a style="position:absolute;top:20px;right:1rem;opacity:0.8;"
+                            href="https://clipchamp.com/watch/rp202YHUD4l?utm_source=embed&utm_medium=embed&utm_campaign=watch">
+                            <img loading="lazy" style="height:22px;" src="https://clipchamp.com/e.svg"
+                                alt="Made with Clipchamp" />
                         </a>
-                        <iframe allow="autoplay;" allowfullscreen style="border:none" src="https://clipchamp.com/watch/rp202YHUD4l/embed" width="720" height="420"></iframe>
+                        <iframe allow="autoplay;" allowfullscreen style="border:none"
+                            src="https://clipchamp.com/watch/rp202YHUD4l/embed" width="720" height="420"></iframe>
                         <p class="flex">
-                            <a class="gitLink" href="https://github.com/k-mabbott/Ninja-Platformer">View project on Github</a>
+                            <a class="gitLink" href="https://github.com/k-mabbott/Ninja-Platformer">View project on
+                                Github</a>
                         </p>
                     </div>
                 </div>
                 <!-- -----------------------------------------------------TopDownCars-------------->
-                <button type="button" class="projects flex" onmouseover="hoverProject(this)" onmouseout="hoverProjectOut(this)" onclick="showProject(this)">Top Down Drift Game</button> 
+                <button type="button" class="projects flex" onmouseover="hoverProject(this)"
+                    onmouseout="hoverProjectOut(this)" onclick="showProject(this)">Top Down Drift Game</button>
                 <img src="./images/carDriftSM.gif" alt="TopDownCars" class="preview">
                 <div id="TopDownCars" class="flex col pop-up-card">
                     <div class="flex space-between align">
@@ -186,17 +203,22 @@
                         <button type="button" onclick="hide(this)" class="pop-up-card-btn">X</button>
                     </div>
                     <div style="position:relative;width:fit-content;height:fit-content;margin:1rem auto;">
-                        <a style="position:absolute;top:20px;right:1rem;opacity:0.8;" href="https://clipchamp.com/watch/4Ch4iYyfuL9?utm_source=embed&utm_medium=embed&utm_campaign=watch">
-                            <img loading="lazy" style="height:22px;" src="https://clipchamp.com/e.svg" alt="Made with Clipchamp" />
+                        <a style="position:absolute;top:20px;right:1rem;opacity:0.8;"
+                            href="https://clipchamp.com/watch/4Ch4iYyfuL9?utm_source=embed&utm_medium=embed&utm_campaign=watch">
+                            <img loading="lazy" style="height:22px;" src="https://clipchamp.com/e.svg"
+                                alt="Made with Clipchamp" />
                         </a>
-                        <iframe allow="autoplay;" allowfullscreen style="border:none" src="https://clipchamp.com/watch/4Ch4iYyfuL9/embed" width="720" height="420"></iframe>
+                        <iframe allow="autoplay;" allowfullscreen style="border:none"
+                            src="https://clipchamp.com/watch/4Ch4iYyfuL9/embed" width="720" height="420"></iframe>
                         <p class="flex">
-                            <a class="gitLink" href="https://github.com/k-mabbott/TopDownCars">View project on Github</a>
+                            <a class="gitLink" href="https://github.com/k-mabbott/TopDownCars">View project on
+                                Github</a>
                         </p>
                     </div>
                 </div>
                 <!-- -----------------------------------------------------Calc-------------->
-                <button type="button" class="projects flex" onmouseover="hoverProject(this)" onmouseout="hoverProjectOut(this)" onclick="showProject(this)">Basic Calculator</button> 
+                <button type="button" class="projects flex" onmouseover="hoverProject(this)"
+                    onmouseout="hoverProjectOut(this)" onclick="showProject(this)">Basic Calculator</button>
                 <img src="./images/calc.png" alt="Calculator" class="preview">
                 <div id="calculator" class="flex col pop-up-card">
                     <div class="flex space-between align">
@@ -206,7 +228,8 @@
                     <object type="text/html" data="./Calculator/index.html"></object>
                 </div>
                 <!-- -----------------------------------------------------Pacman-------------->
-                <button type="button" class="projects flex" onmouseover="hoverProject(this)" onmouseout="hoverProjectOut(this)" onclick="showProject(this)">Pacman Game</button> 
+                <button type="button" class="projects flex" onmouseover="hoverProject(this)"
+                    onmouseout="hoverProjectOut(this)" onclick="showProject(this)">Pacman Game</button>
                 <img src="./images/pacman-img.png" alt="pacman" class="preview">
                 <div class="flex col pop-up-card">
                     <div class="flex space-between align">
@@ -216,7 +239,8 @@
                     <object type="text/html" data="./Pacman_demo/index.html" id="pacman"></object>
                 </div>
                 <!-- -----------------------------------------------------Weather-------------->
-                <button type="button" class="projects flex" onmouseover="hoverProject(this)" onmouseout="hoverProjectOut(this)" onclick="showProject(this)">Weather Page</button> 
+                <button type="button" class="projects flex" onmouseover="hoverProject(this)"
+                    onmouseout="hoverProjectOut(this)" onclick="showProject(this)">Weather Page</button>
                 <img src="./images/weather.png" alt="weather" class="preview">
                 <div id="weather" class="flex col pop-up-card">
                     <div class="flex space-between align">
@@ -226,7 +250,8 @@
                     <object type="text/html" data="./Dojo_weather/index.html"></object>
                 </div>
                 <!-- -----------------------------------------------------Profile-------------->
-                <button type="button" class="projects flex" onmouseover="hoverProject(this)" onmouseout="hoverProjectOut(this)" onclick="showProject(this)">Jane Doe Profile</button> 
+                <button type="button" class="projects flex" onmouseover="hoverProject(this)"
+                    onmouseout="hoverProjectOut(this)" onclick="showProject(this)">Jane Doe Profile</button>
                 <img src="./images/jane-doe.png" alt="jane-doe" class="preview">
                 <div id="jane-doe" class="flex col pop-up-card">
                     <div class="flex space-between align">
@@ -240,32 +265,47 @@
             <div id="wood-work" class="flex col bkg-clr bd-r pad-s pad-tb align gap">
                 <h3>Wood Projects</h3>
                 <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
-                <div class="pa-gallery-player-widget"
-                    data-link="https://photos.app.goo.gl/vuUPCHiuH2qbmkkx8"
-                    data-title="Wood working"
-                    data-description="17 new items added to shared album">
-                    <object data="https://lh3.googleusercontent.com/HWb0_XAWvvNvgab6yDHRClnMhooZSB8u3ijVxYNrwDWXkDseNMwzXwQCF5GWx2h9BbuLbSHu7Tk70T_S4oGYRr1ZP0JM0mXYaTOB9XDJmjbwdoU1PBOpkgryYoME9R4rg3jWG1nBFw=w1920-h1080"></object>
-                    <object data="https://lh3.googleusercontent.com/tDtZuvchOHFu5JM2MS7APMHcyRb42Sp6PgQzxm4ArZXYaU4tPl7rNwAxxsvEb8ewsPvcpWe6QuA33HZSwLq1Muc98grTvu-mJrLns3lNM71txr8HPfkYDpiDUv8XcgjPaKnoIKh4Ag=w1920-h1080"></object>
-                    <object data="https://lh3.googleusercontent.com/XbW5buJvfVXQBuBIGbaw4bDrbvFRrB0NHC77hlbqiRnXXXqmMR4MrnGp5ExOh1Fjku3H_PaZKG_qM0Bs1cumjs1r9A9FFvwR-EBY5KprS0tApLZdhiYuP7IqxJtMmIRQnvWSaLa0TQ=w1920-h1080"></object>
-                    <object data="https://lh3.googleusercontent.com/k81UQ_lFDa-jVZ2ymrJsJOljj3Wv2J53AvwajysamFlivZUWhhImP62tjC1x8gu1DXiH1PLGLW6Yj2QkNoWcxvBBvMSvUYoNWgYuIh0x8X_TwBECi97Gadev23k0t9P3uYtd1axc0Q=w1920-h1080"></object>
-                    <object data="https://lh3.googleusercontent.com/pQufaHIeRb8aZ65OS3ooyEC_ZLbJL4ybPStytQun3GbS2aBuM8ZGTe_RJYZHS91gj3-yhEqmJNAemC3FfAzBnQOf6SduRGOrduAEO9-sSWResPIdN4Qp1TChZwFzNbZLveqGu3NW7A=w1920-h1080"></object>
-                    <object data="https://lh3.googleusercontent.com/Htw9Cw82H-2r77P5sTNWlKiOHzB-VeMa2ukH4xYisJxcr7SeqwCcAJEMVbMJL0KCuBrbUdtaMk8KcxOXzpHy8D4P_xosOb1OMVfrxHCWMsY3PllBl_kUnWUlBah49drLN9OQ4r0paw=w1920-h1080"></object>
-                    <object data="https://lh3.googleusercontent.com/WT2cjLPJPLBcNDbwEqwrqyVJYEdEl1dfQUkKXFdEV8mLYHZFzrS8Q2FRBfGkc0qCyGwL5KSc5EQdrLJWPwyOx1t_FZhT0bc6DM3MI5TQf9yTjjeZbnRPQl7QVqna-4O28dEqPBmmwg=w1920-h1080"></object>
-                    <object data="https://lh3.googleusercontent.com/tOORL24KMiXe8g7Kry6_b0FvQLbWLi7_Q3_n44PUvyuQAS1lJV7zXexQI5FpbX1i7GmjA-xNJ922tteqQhQcH44saPQxirOnwTBddKmqYAAQToLWuJ63RuDD1BvrGRKbgJc6gFVPKw=w1920-h1080"></object>
-                    <object data="https://lh3.googleusercontent.com/2gMkIxpPPT5OYqOzezxEUDRmFOxLDrL3oInFeq3SAah7W2jNWLQSAdPx5GnrucquJutRPpDux_--SRKqR0igAyC7v2tusr_7lJesYxuvziuuYyxa2OITmxDScHp-uKwHQKT7ux-F0Q=w1920-h1080"></object>
-                    <object data="https://lh3.googleusercontent.com/vgaaHB1drck7rlrlZItE2MZs4_A6fl94csdznL2AMJSC54QgXKs-InoZdaqdO7ZEGLOH6X85Vi9RLBCygvcHkWoFVvkOEUjOAKJU-BDw4FV3b6nDR3Sxfv0WSph1YXhboLREEDliaA=w1920-h1080"></object>
-                    <object data="https://lh3.googleusercontent.com/CK0wrIdYQBY2ULa7UJu4T57sTkqr3mVF7lvkQoZu1-4odHy5bwO2DY-awT1jiAe3zmU6-T8JBCnPgleJe5V57o-nfYRyjEYvPxWYRebWM6RydVwL95JH-Lj24zsUIcXqJobyC6PLEQ=w1920-h1080"></object>
-                    <object data="https://lh3.googleusercontent.com/Sahrft-KoRrZPOzTaU85mn_33AzRnHQXf1_LVWmef5DPSFoHYQssq_ozky_cExohWIZdyadceyPRWDX-uYvH7oCtbN03sBm0Tsav-bmh6BSL7UJiDBW4GceJIid-fvzh9bPJwKhcvg=w1920-h1080"></object>
-                    <object data="https://lh3.googleusercontent.com/PMgVF8zqA-x733aq0FCuRLiUvRN9kvzJfdghg6-4hdhqcVuKpIukPv5N5k3EGaAeMtFj8xqiR4OQfyZbTS2g7uhbm1So03o6cxWlCT4CgDsolCzm6vmEuhe2k5zJrLwItYBmckUJIw=w1920-h1080"></object>
-                    <object data="https://lh3.googleusercontent.com/dDfD3SBe2x-_KfjMki940JHyyoCcCjoB4qMoqm3bBfxjW4tKhlVq0PEvLhNBTQJVA66EU-mSfCIEGuP3i0ACBwr_TSne5pi30of90vjFWwR6sx49scp6_1YG3EEfPJiKjS9srX2Xyg=w1920-h1080"></object>
-                    <object data="https://lh3.googleusercontent.com/eCHTeAVXY58J_YjIYCVj7B3HQxVt-rK0i8VeOQdn8q27f7Qltv-ljYnW9l7TRTSasU-kkRKAO8m9BGpIDU35wjcrPSY4iquQdaQqcbOfLLbjUfqeHZCh-XUKeQJMUoGMks4F1DlyGQ=w1920-h1080"></object>
-                    <object data="https://lh3.googleusercontent.com/oHfQOCFxhs6Jj4BXTYjy3-QCo7UCo3TbW7t5Lb_uvupKyZLpXtT-xGsDoBkURLKno1zuLh-s3AUw3KeS1aVotD4Vk6k5nrHpfk31dHEe5eQ1-09LPdhUfVD9Fs5HchmQGQ19QDVzZg=w1920-h1080"></object>
-                    <object data="https://lh3.googleusercontent.com/3MFLnvEaZDf4Rt67WSPeaXdhsWd_yDXIgKuH3FptmEqiLrA4wHJ-tevsJpiWAhw-RXX_eTvQVXDP0YOt2-U7cbMarfI559DTrPl0S5VQNZ3aET_YGVg0Gxj_TbMWJ_t3h684BlSsMg=w1920-h1080"></object>
-                </div> 
+                <div class="pa-gallery-player-widget" data-link="https://photos.app.goo.gl/vuUPCHiuH2qbmkkx8"
+                    data-title="Wood working" data-description="17 new items added to shared album">
+                    <object
+                        data="https://lh3.googleusercontent.com/HWb0_XAWvvNvgab6yDHRClnMhooZSB8u3ijVxYNrwDWXkDseNMwzXwQCF5GWx2h9BbuLbSHu7Tk70T_S4oGYRr1ZP0JM0mXYaTOB9XDJmjbwdoU1PBOpkgryYoME9R4rg3jWG1nBFw=w1920-h1080"></object>
+                    <object
+                        data="https://lh3.googleusercontent.com/tDtZuvchOHFu5JM2MS7APMHcyRb42Sp6PgQzxm4ArZXYaU4tPl7rNwAxxsvEb8ewsPvcpWe6QuA33HZSwLq1Muc98grTvu-mJrLns3lNM71txr8HPfkYDpiDUv8XcgjPaKnoIKh4Ag=w1920-h1080"></object>
+                    <object
+                        data="https://lh3.googleusercontent.com/XbW5buJvfVXQBuBIGbaw4bDrbvFRrB0NHC77hlbqiRnXXXqmMR4MrnGp5ExOh1Fjku3H_PaZKG_qM0Bs1cumjs1r9A9FFvwR-EBY5KprS0tApLZdhiYuP7IqxJtMmIRQnvWSaLa0TQ=w1920-h1080"></object>
+                    <object
+                        data="https://lh3.googleusercontent.com/k81UQ_lFDa-jVZ2ymrJsJOljj3Wv2J53AvwajysamFlivZUWhhImP62tjC1x8gu1DXiH1PLGLW6Yj2QkNoWcxvBBvMSvUYoNWgYuIh0x8X_TwBECi97Gadev23k0t9P3uYtd1axc0Q=w1920-h1080"></object>
+                    <object
+                        data="https://lh3.googleusercontent.com/pQufaHIeRb8aZ65OS3ooyEC_ZLbJL4ybPStytQun3GbS2aBuM8ZGTe_RJYZHS91gj3-yhEqmJNAemC3FfAzBnQOf6SduRGOrduAEO9-sSWResPIdN4Qp1TChZwFzNbZLveqGu3NW7A=w1920-h1080"></object>
+                    <object
+                        data="https://lh3.googleusercontent.com/Htw9Cw82H-2r77P5sTNWlKiOHzB-VeMa2ukH4xYisJxcr7SeqwCcAJEMVbMJL0KCuBrbUdtaMk8KcxOXzpHy8D4P_xosOb1OMVfrxHCWMsY3PllBl_kUnWUlBah49drLN9OQ4r0paw=w1920-h1080"></object>
+                    <object
+                        data="https://lh3.googleusercontent.com/WT2cjLPJPLBcNDbwEqwrqyVJYEdEl1dfQUkKXFdEV8mLYHZFzrS8Q2FRBfGkc0qCyGwL5KSc5EQdrLJWPwyOx1t_FZhT0bc6DM3MI5TQf9yTjjeZbnRPQl7QVqna-4O28dEqPBmmwg=w1920-h1080"></object>
+                    <object
+                        data="https://lh3.googleusercontent.com/tOORL24KMiXe8g7Kry6_b0FvQLbWLi7_Q3_n44PUvyuQAS1lJV7zXexQI5FpbX1i7GmjA-xNJ922tteqQhQcH44saPQxirOnwTBddKmqYAAQToLWuJ63RuDD1BvrGRKbgJc6gFVPKw=w1920-h1080"></object>
+                    <object
+                        data="https://lh3.googleusercontent.com/2gMkIxpPPT5OYqOzezxEUDRmFOxLDrL3oInFeq3SAah7W2jNWLQSAdPx5GnrucquJutRPpDux_--SRKqR0igAyC7v2tusr_7lJesYxuvziuuYyxa2OITmxDScHp-uKwHQKT7ux-F0Q=w1920-h1080"></object>
+                    <object
+                        data="https://lh3.googleusercontent.com/vgaaHB1drck7rlrlZItE2MZs4_A6fl94csdznL2AMJSC54QgXKs-InoZdaqdO7ZEGLOH6X85Vi9RLBCygvcHkWoFVvkOEUjOAKJU-BDw4FV3b6nDR3Sxfv0WSph1YXhboLREEDliaA=w1920-h1080"></object>
+                    <object
+                        data="https://lh3.googleusercontent.com/CK0wrIdYQBY2ULa7UJu4T57sTkqr3mVF7lvkQoZu1-4odHy5bwO2DY-awT1jiAe3zmU6-T8JBCnPgleJe5V57o-nfYRyjEYvPxWYRebWM6RydVwL95JH-Lj24zsUIcXqJobyC6PLEQ=w1920-h1080"></object>
+                    <object
+                        data="https://lh3.googleusercontent.com/Sahrft-KoRrZPOzTaU85mn_33AzRnHQXf1_LVWmef5DPSFoHYQssq_ozky_cExohWIZdyadceyPRWDX-uYvH7oCtbN03sBm0Tsav-bmh6BSL7UJiDBW4GceJIid-fvzh9bPJwKhcvg=w1920-h1080"></object>
+                    <object
+                        data="https://lh3.googleusercontent.com/PMgVF8zqA-x733aq0FCuRLiUvRN9kvzJfdghg6-4hdhqcVuKpIukPv5N5k3EGaAeMtFj8xqiR4OQfyZbTS2g7uhbm1So03o6cxWlCT4CgDsolCzm6vmEuhe2k5zJrLwItYBmckUJIw=w1920-h1080"></object>
+                    <object
+                        data="https://lh3.googleusercontent.com/dDfD3SBe2x-_KfjMki940JHyyoCcCjoB4qMoqm3bBfxjW4tKhlVq0PEvLhNBTQJVA66EU-mSfCIEGuP3i0ACBwr_TSne5pi30of90vjFWwR6sx49scp6_1YG3EEfPJiKjS9srX2Xyg=w1920-h1080"></object>
+                    <object
+                        data="https://lh3.googleusercontent.com/eCHTeAVXY58J_YjIYCVj7B3HQxVt-rK0i8VeOQdn8q27f7Qltv-ljYnW9l7TRTSasU-kkRKAO8m9BGpIDU35wjcrPSY4iquQdaQqcbOfLLbjUfqeHZCh-XUKeQJMUoGMks4F1DlyGQ=w1920-h1080"></object>
+                    <object
+                        data="https://lh3.googleusercontent.com/oHfQOCFxhs6Jj4BXTYjy3-QCo7UCo3TbW7t5Lb_uvupKyZLpXtT-xGsDoBkURLKno1zuLh-s3AUw3KeS1aVotD4Vk6k5nrHpfk31dHEe5eQ1-09LPdhUfVD9Fs5HchmQGQ19QDVzZg=w1920-h1080"></object>
+                    <object
+                        data="https://lh3.googleusercontent.com/3MFLnvEaZDf4Rt67WSPeaXdhsWd_yDXIgKuH3FptmEqiLrA4wHJ-tevsJpiWAhw-RXX_eTvQVXDP0YOt2-U7cbMarfI559DTrPl0S5VQNZ3aET_YGVg0Gxj_TbMWJ_t3h684BlSsMg=w1920-h1080"></object>
+                </div>
                 <object type="text/html" data="https://photos.app.goo.gl/vuUPCHiuH2qbmkkx8"></object>
             </div>
         </aside>
-        
+
         <!-- --------------------------------------------------------- Profile card ----------Right side AKA Main ----------------------->
         <div id="profile-div" class="flex col gap">
             <div class="flex space-between gap-s bkg-clr bd-r pad">
@@ -273,16 +313,25 @@
                     <div>
                         <h2 class="bold">About me</h2>
                         <p>Hello!
-                            I recently graduated from the Coding Dojo software engineering boot camp. I have experience working with HTML, CSS, JavaScript, C# and Python. I have had a passion for technology and problem solving for as long as I can remember. My background in construction and working as an automotive technician have revolved around me being able to take things apart to understand how they are built and work. As I have grown as a developer I have realized how much my past experience has help me with even problem solving in my own code. Wether it be a house, car or a good program they all start with a stong foundation and are built to last!
+                            I recently graduated from the Coding Dojo software engineering boot camp. I have experience
+                            working with HTML, CSS, JavaScript, C# and Python. I have had a passion for technology and
+                            problem solving for as long as I can remember. My background in construction and working as
+                            an automotive technician have revolved around me being able to take things apart to
+                            understand how they are built and work. As I have grown as a developer I have realized how
+                            much my past experience has help me with even problem solving in my own code. Wether it be a
+                            house, car or a good program they all start with a stong foundation and are built to last!
                         </p>
                     </div>
                     <div>
                         <h2 class="bold">Languages and Tools</h2>
                         <ul>
-                            <li><span class="bold">Languages:</span> HTML, CSS, JavaScript(ES6, Node.js), Python, C#, MySQL</li>
-                            <li><span class="bold">Frameworks/Libraries:</span> Flask, Jinja, Mongoose, React, Express, JQuerry, Axios, ASP.NET, .NET core, Socket.io, Razor, JSX, AWS EC2, Bootstrap</li>
+                            <li><span class="bold">Languages:</span> HTML, CSS, JavaScript(ES6, Node.js), Python, C#,
+                                MySQL</li>
+                            <li><span class="bold">Frameworks/Libraries:</span> Flask, Jinja, Mongoose, React, Express,
+                                JQuerry, Axios, ASP.NET, .NET core, Socket.io, Razor, JSX, AWS EC2, Bootstrap</li>
                             <li><span class="bold">Databases:</span> MySQL, MongoDB</li>
-                            <li><span class="bold">Programs:</span> VSCode, Postman, MySQL Workbench, Terminal, Git/Github</li>
+                            <li><span class="bold">Programs:</span> VSCode, Postman, MySQL Workbench, Terminal,
+                                Git/Github</li>
                         </ul>
                     </div>
                 </div>
@@ -301,29 +350,38 @@
                             <h4 class="bold">General Contractor / Owner</h4>
                             <span>K.mabb constrution</span>
                             <ul class="m-s-s">
-                                <li>Communicated with multiple home owners and various assist trades to coordinate times and schedules</li>
-                                <li>Solved complex problems working with other contractors on house design and building approaches. To achieve  the safest and most time efficient approach.</li>
-                                <li>Experience in leading projects with multiple workers under my supervision. Keeping them safe and busy with relevant work to achieve the goal. </li>
+                                <li>Communicated with multiple home owners and various assist trades to coordinate times
+                                    and schedules</li>
+                                <li>Solved complex problems working with other contractors on house design and building
+                                    approaches. To achieve the safest and most time efficient approach.</li>
+                                <li>Experience in leading projects with multiple workers under my supervision. Keeping
+                                    them safe and busy with relevant work to achieve the goal. </li>
                             </ul>
                         </li>
                         <li>
-                            <h4 class="bold" >Outside Machinist / Mechanic (nuclear)</h4>
+                            <h4 class="bold">Outside Machinist / Mechanic (nuclear)</h4>
                             <span>Puget Sound Naval Shipyard</span>
                             <ul class="m-s-s">
-                                <li>Demonstrated the ability to repair, replace, maintain, inspect and test nuclear components such as valves, ventilation, pumps and engines under strict guidelines.</li>
-                                <li>Documented any deficiencies found while the work was being performed and reported to the appropriate personnel per case issue.</li>
-                                <li>Acquired many qualifications from precision measuring to cleanliness levels of nuclear systems.</li>
+                                <li>Demonstrated the ability to repair, replace, maintain, inspect and test nuclear
+                                    components such as valves, ventilation, pumps and engines under strict guidelines.
+                                </li>
+                                <li>Documented any deficiencies found while the work was being performed and reported to
+                                    the appropriate personnel per case issue.</li>
+                                <li>Acquired many qualifications from precision measuring to cleanliness levels of
+                                    nuclear systems.</li>
                             </ul>
                         </li>
                         <li>
-                            <h4 class="bold" >Automotive Mechanic</h4>
+                            <h4 class="bold">Automotive Mechanic</h4>
                             <span>Nissan of Fife</span>
                             <ul class="m-s-s">
                                 <li>Developed exceptional organizational and planning skills.
-                                    <li>Ability to follow instructions well and make decisions with little to no supervision.</li>
-                                    <li>Comfortable in fast paced high stress situations requiring attention to detail.</li>
-                                    <li>Diagnose and repair electrical systems using digital multimeters and oscilloscopes.</li>
-                                    <li>Experience working with hydraulic and pressurized systems in a safe manor.</li>
+                                <li>Ability to follow instructions well and make decisions with little to no
+                                    supervision.</li>
+                                <li>Comfortable in fast paced high stress situations requiring attention to detail.</li>
+                                <li>Diagnose and repair electrical systems using digital multimeters and oscilloscopes.
+                                </li>
+                                <li>Experience working with hydraulic and pressurized systems in a safe manor.</li>
                             </ul>
                         </li>
                     </ul>
@@ -336,27 +394,31 @@
                     </summary>
                     <ul class="flex col gap-s">
                         <li>
-                            <h4 class="bold" >Coding Dojo</h4>
+                            <h4 class="bold">Coding Dojo</h4>
                             <span>Full Stack software developer</span>
-                            <p>Coding Dojo is an immersive web development program specialized in teaching full stack development to train students to excel in the professional software development field — from front-end user experience to back-end to data storage.</p>
+                            <p>Coding Dojo is an immersive web development program specialized in teaching full stack
+                                development to train students to excel in the professional software development field —
+                                from front-end user experience to back-end to data storage.</p>
                             <ul>
-                                <li>Accumulated 1,000+ hours of intensive programming coursework, including building, testing, and debugging in Python, C#, and MERN.</li>
+                                <li>Accumulated 1,000+ hours of intensive programming coursework, including building,
+                                    testing, and debugging in Python, C#, and MERN.</li>
                                 <li>200+ hours of full stack development on web apps and other technical projects.</li>
                                 <li>Remote pair programming experience.</li>
                                 <li>Languages: Python, C#, JavaScript, HTML, CSS, MySQL.</li>
-                                <li>Libraries/Frameworks: Flask, MongoDB, Express, React, Node.js, Mongoose, ASP.NET, .NET Core.</li>
+                                <li>Libraries/Frameworks: Flask, MongoDB, Express, React, Node.js, Mongoose, ASP.NET,
+                                    .NET Core.</li>
                                 <li>Programs: VSCode, MySQL Workbench, Postman (API Testing).</li>
                             </ul>
                         </li>
                         <li>
-                            <h4 class="bold" >Universal Technical Institute</h4>
+                            <h4 class="bold">Universal Technical Institute</h4>
                             <span>Automotive Mechanic</span>
-                            <p>Taught the ability to diagnose and repair many component such as 
+                            <p>Taught the ability to diagnose and repair many component such as
                                 electrical, hydraulics, engines and suspension
                             </p>
                         </li>
                         <li>
-                            <h4 class="bold" >North Kitsap High School</h4>
+                            <h4 class="bold">North Kitsap High School</h4>
                             <span>Highschool</span>
                             <p>Graduated with highschool diploma.
                             </p>
@@ -389,4 +451,5 @@
     </footer>
     <script src="script.js"></script>
 </body>
+
 </html>
